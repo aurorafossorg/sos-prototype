@@ -1,0 +1,15 @@
+Material Wall : Common/MatDefs/Misc/Unshaded.j3md {
+     MaterialParameters {
+        ColorMap : Flip MagNearest Textures/Wall.png
+        AlphaDiscardThreshold : 0.4
+     }
+    AdditionalRenderState {
+      Blend Alpha
+      DepthWrite On
+      ColorWrite On
+      DepthTest On
+      FaceCull Back
+      AlphaTestFalloff 0.0
+      Wireframe Off
+    }
+}

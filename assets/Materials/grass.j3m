@@ -1,0 +1,9 @@
+Material Grass : Common/MatDefs/Misc/Unshaded.j3md {
+     MaterialParameters {
+        Color : 0.6666667 0.90588236 0.28235295 1.0
+     }
+    AdditionalRenderState {
+      DepthWrite On
+      ColorWrite On
+    }
+}

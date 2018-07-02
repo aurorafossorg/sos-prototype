@@ -1,0 +1,18 @@
+Material Wall Gate : Common/MatDefs/Misc/Unshaded.j3md {
+     MaterialParameters {
+        ColorMap : Flip MagNearest Textures/Gate_Wall.png
+        VertexColor : false
+        SeparateTexCoord : false
+        HardwareShadows : false
+        BackfaceShadows : false
+        AlphaDiscardThreshold : 0.20000002
+     }
+    AdditionalRenderState {
+      Blend Alpha
+      DepthWrite On
+      ColorWrite On
+      DepthTest On
+      FaceCull Back
+      AlphaTestFalloff 0.0
+    }
+}

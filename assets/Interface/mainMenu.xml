@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.lessvoid.com/nifty-gui" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://raw.githubusercontent.com/void256/nifty-gui/1.4/nifty-core/src/main/resources/nifty.xsd https://raw.githubusercontent.com/void256/nifty-gui/1.4/nifty-core/src/main/resources/nifty.xsd">
+    <useControls filename="nifty-default-controls.xml" />
+    <useStyles filename="nifty-default-styles.xml" />
+    <screen id="mainMenu" controller="engine.ui.UIManager">
+        <layer id="background" childLayout="center">
+            <image id="backgroundImage" filename="Textures/menuBackgroundWIP.png" />
+        </layer>
+        <layer id="menu" childLayout="vertical">
+            <panel id="titlePanel" childLayout="center" width="100%" height="20%" backgroundColor="#0008">
+                <control name="label" id="titleLabel" width="100%" height ="100%" textVAlign="Center" font="Interface/Fonts/DejaVuSans.fnt" text="Shadows of Shaema (Prototype)" />
+            </panel>
+            <panel id="centerPanel" width="100%" height="70%" childLayout="horizontal">
+                <panel width="70%" />
+                <panel id="menuPanel" width="30%" height="100%" childLayout="vertical">
+                    <panel height="25%" childLayout="center">
+                        <control name="button" id="playButton" label="Play" width="80%" height="80%">
+                            <interact onClick="onEvent(play)" />
+                        </control>
+                    </panel>
+                    <panel height="25%" childLayout="center">
+                        <control name="button" id="optionsButton" label="Options" width="80%" height="80%">
+                            <interact onClick="onEvent(options)" />
+                        </control>
+                    </panel>
+                    <panel height="25%" />
+                    <panel height="25%" childLayout="center">
+                        <control name="button" id="exitButton" label="Exit" width="80%" height="80%">
+                            <interact onClick="onEvent(exit)" />
+                        </control>
+                    </panel>
+                </panel>
+            </panel>
+            <panel id="copyrightMenu" childLayout="center" width="100%" height="10%" backgroundColor="#000a">
+                <control name="label" id="copyrightLabel" textVAlign="center" text="This product is part of AuroraFOSS organization. Redistribution outside the development team is strictly forbidden." />
+            </panel>
+        </layer>
+    </screen>
+</nifty>

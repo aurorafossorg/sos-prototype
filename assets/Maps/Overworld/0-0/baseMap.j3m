@@ -1,0 +1,11 @@
+Material My Material : Common/MatDefs/Misc/Unshaded.j3md {
+     MaterialParameters {
+        ColorMap : FlipH MagNearest MinBilinearNoMipMaps Blender/Chunks/0-0/BaseMap-0-0.png
+        ShadowMap5 : Flip 
+     }
+    AdditionalRenderState {
+      FaceCull Back
+      DepthWrite On
+      DepthTest On
+    }
+}

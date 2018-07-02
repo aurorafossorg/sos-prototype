@@ -1,0 +1,32 @@
+# Compiled binaries
+dist/
+build/
+
+# Copy-righted assets
+assets/Sounds/background.ogg
+assets/Sounds/rotateLeft.wav
+assets/Sounds/step1.wav
+assets/Sounds/step2.wav
+assets/Sounds/step3.wav
+assets/Textures/raw_character.gif
+assets/Textures/wil-quinn-slime-move.gif
+assets/Textures/wil-quinn-slime-move_frames/
+assets/Textures/Aseprite/DefaultChar1.aseprite
+assets/Textures/Aseprite/DefaultChar2.aseprite
+assets/Textures/Aseprite/DefaultChar3.aseprite
+assets/Textures/Aseprite/DefaultChar4.aseprite
+assets/Textures/Aseprite/DefaultChar5.aseprite
+assets/Textures/Aseprite/DefaultChar6.aseprite
+assets/Textures/Aseprite/DefaultChar7.aseprite
+assets/Textures/Aseprite/DefaultChar8.aseprite
+assets/Textures/Characters/*
+
+# Local libs generated on run time
+*.so
+*.dll
+
+# Screenshots folder
+Screenshots/
+
+# Build tools local folders
+.gradle/

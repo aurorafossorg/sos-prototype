@@ -1,0 +1,23 @@
+{
+    "metadata": {
+        "chunkRow": 0,
+        "chunkCollumn": 0,
+        "author": "Ev1lbl0w"
+    },
+
+    "baseWorld": {
+        "path": "chunk.j3o"
+    },
+
+    "objects": [
+
+    ],
+
+    "collisions": [
+        {
+            "pos":"null",
+            "type":"null",
+            "size":"null"
+        }
+    ]
+}

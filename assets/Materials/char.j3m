@@ -1,0 +1,14 @@
+Material My Material : Common/MatDefs/Misc/Unshaded.j3md {
+     MaterialParameters {
+        GlowColor : 1.0 1.0 1.0 1.0
+        ColorMap : Flip MagNearest Textures/char_front.png
+        AlphaDiscardThreshold : 1.0
+     }
+    AdditionalRenderState {
+      DepthWrite On
+      ColorWrite On
+      DepthTest On
+      FaceCull Back
+      Blend Alpha
+    }
+}
