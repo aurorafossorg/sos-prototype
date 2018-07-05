@@ -73,7 +73,9 @@ public abstract class BaseSprite extends AbstractControl {
         super.setSpatial(spat);
         
         // Add a billboard control
-        this.spatial.addControl(new BillboardControl());
+        BillboardControl bc = new BillboardControl();
+        bc.setAlignment(BillboardControl.Alignment.AxialY);
+        this.spatial.addControl(bc);
         
         currentMajor = 2;
         currentMinor = idleMinor;

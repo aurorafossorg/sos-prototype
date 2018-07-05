@@ -15,6 +15,15 @@ public class AudioSettings {
     
     public AudioSettings() {}
     
+    public AudioSettings(AudioSettings clone) {
+        this.volume = clone.volume;
+        this.pitch = clone.pitch;
+        this.looping = clone.looping;
+        this.positional = clone.positional;
+        this.position = clone.position;
+        this.dataType = clone.dataType;
+    }
+    
     public AudioSettings volume(float volume) {
         this.volume = volume;
         return this;

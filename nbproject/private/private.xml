@@ -4,19 +4,18 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/src/engine/ui/UIManager.java</file>
+            <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/assets/Maps/Overworld/0-0/Chunk-0-0.j3o</file>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/src/engine/audio/AudioManager.java</file>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/src/appstates/GameplayAS.java</file>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/src/engine/Camera.java</file>
+            <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/assets/Materials/Wall.j3m</file>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/src/engine/DebugManager.java</file>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/src/appstates/MainMenuAS.java</file>
-            <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/assets/Maps/Overworld/0-0/chunk.j3o</file>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/assets/Interface/mainMenu.xml</file>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/src/engine/audio/AudioFiles.java</file>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/src/engine/ui/EventType.java</file>
-            <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/assets/Maps/Overworld/0-0/baseMap.j3m</file>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/src/engine/audio/AudioSettings.java</file>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/src/mygame/Main.java</file>
-            <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/build.xml</file>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/src/sprite/BaseSprite.java</file>
             <file>file:/home/ricardo/Workspace/Programming/Java/SOSConcept/src/sprite/Character.java</file>
         </group>

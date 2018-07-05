@@ -1,0 +1,11 @@
+Material My Material : Common/MatDefs/Misc/Unshaded.j3md {
+     MaterialParameters {
+        ColorMap : Flip Repeat MagNearest "Blender/Models/Castle Walls/WallTex.png"
+     }
+    AdditionalRenderState {
+      FaceCull Back
+      DepthWrite On
+      DepthTest On
+      ColorWrite On
+    }
+}

@@ -46,9 +46,8 @@ public class GameplayAS extends BaseAppState {
     private Camera cam;
     private ViewPort viewPort;
     
-    //private float frustumSize = 7;
-    private float frustumSize = 452.474f;
-    private final float speed = 0.2f;
+    private float frustumSize = 7;
+    private final float speed = 0.025f;
     private engine.Camera chaseCam;
     private Node charNode;
     private final boolean invertX = true;
@@ -78,7 +77,8 @@ public class GameplayAS extends BaseAppState {
         this.viewPort = this.app.getViewPort();
         
         //Node world = (Node)assetManager.loadModel("Models/test-stage.j3o");
-        Node world = (Node)assetManager.loadModel("Maps/Overworld/0-0/chunk.j3o");
+        //Node world = (Node)assetManager.loadModel("Maps/Overworld/0-0/chunk.j3o");
+        Node world = (Node)assetManager.loadModel("Maps/Overworld/0-0/Chunk-0-0.j3o");
         rootNode.attachChild(world);
         logger.log(Level.FINEST, "[1/7] Game world loaded.");
         
@@ -114,7 +114,7 @@ public class GameplayAS extends BaseAppState {
         cam.setFrustum(-1000, 1000, -aspect * frustumSize, aspect * frustumSize, frustumSize, -frustumSize);
         logger.log(Level.FINEST, "[6/7] Ortographic camera set up.");
         
-        inputManager.addListener(action, "RotLeft", "RotRight", "Frustum", "Forward", "Backwards", "Left", "Right", "Menu", "Screenshot");
+        inputManager.addListener(action, "RotLeft", "RotRight", "Frustum", "Forward", "Backwards", "Left", "Right", "Sprinting", "Menu", "Screenshot");
         inputManager.addListener(analog, "Size+", "Size-");
         inputManager.addMapping("Size+", new KeyTrigger(KeyInput.KEY_SUBTRACT));
         inputManager.addMapping("Size-", new KeyTrigger(KeyInput.KEY_ADD));
@@ -173,6 +173,7 @@ public class GameplayAS extends BaseAppState {
             
             if(name.equals("Sprinting")) {
                 sprinting = pressed;
+                logger.log(Level.FINEST, "Sprinting... {0}", sprinting);
             }
             
             if(name.equals("Menu") && pressed) {
@@ -193,11 +194,11 @@ public class GameplayAS extends BaseAppState {
         public void onAnalog(String name, float value, float tpf) {
             // Instead of moving closer/farther to object, we zoom in/out.
             if(name.equals("Size+")) {
-                frustumSize += 30f * tpf;
+                frustumSize += 3f * tpf;
                 float aspect = (float) cam.getWidth() / cam.getHeight();
                 cam.setFrustum(-1000, 1000, -aspect * frustumSize, aspect * frustumSize, frustumSize, -frustumSize);
             } else if(name.equals("Size-")) {
-                frustumSize -= 30f * tpf;
+                frustumSize -= 3f * tpf;
                 float aspect = (float) cam.getWidth() / cam.getHeight();
                 cam.setFrustum(-1000, 1000, -aspect * frustumSize, aspect * frustumSize, frustumSize, -frustumSize);
             }
@@ -233,19 +234,20 @@ public class GameplayAS extends BaseAppState {
         Vector3f forwardDir = new Vector3f(0, 0, 0);
         
         if(forward) {
-            forwardDir.addLocal(lookDir.normalize().mult(sprinting ? speed * 2 : speed));
+            forwardDir.addLocal(lookDir.normalize().mult(sprinting ? speed * 1.5f : speed));
         } else if(backward) {
-            forwardDir.addLocal(lookDir.negate().normalize().mult(sprinting ? speed * 2 : speed));
+            forwardDir.addLocal(lookDir.negate().normalize().mult(sprinting ? speed * 1.5f : speed));
         }
         
         if(left) {
-            forwardDir.addLocal(lookDir.cross(Vector3f.UNIT_Y).negate().normalize().mult(sprinting ? speed * 2 : speed));
+            forwardDir.addLocal(lookDir.cross(Vector3f.UNIT_Y).negate().normalize().mult(sprinting ? speed * 1.5f : speed));
         } else if(right) {
-            forwardDir.addLocal(lookDir.cross(Vector3f.UNIT_Y).normalize().mult(sprinting ? speed * 2 : speed));
+            forwardDir.addLocal(lookDir.cross(Vector3f.UNIT_Y).normalize().mult(sprinting ? speed * 1.5f : speed));
         }
         
         charNode.move(forwardDir);
         charControl.setMoving(forward || backward || left || right);
+        charControl.setCycleTime(sprinting ? 0.2f : 0.25f);
         
         if(forward && left) {
             charControl.setCurrentMajor(1);
