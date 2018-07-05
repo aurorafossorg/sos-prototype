@@ -2,7 +2,7 @@
 
 This document contains the details of the assets in question and the progress made for their completion.
 
-**Castle Walls* are traditional looking walls, used for defence and cover.
+*Castle Walls* are traditional looking walls, used for defence and cover.
 
 ## Type 1
 
