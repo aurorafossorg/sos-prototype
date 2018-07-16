@@ -38,4 +38,4 @@ The project runs under [jMonkeyEngine](http://jmonkeyengine.org/). You need JDK 
 
 And the project is built under `dist/`.
 
-**WARNING** - The project currently won't run because it's lacking some assets. These we're omitted due to possible copyrigth infringements. I'm on the process of getting open-source and free assets so people can run this project.
+**WARNING** - The project currently won't run because it's lacking some assets. These we're omitted due to possible copyright infringements. I'm on the process of getting open-source and free assets so people can run this project.
