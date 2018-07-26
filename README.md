@@ -3,7 +3,7 @@ Shadows of Shaema (SOS) Concept
 
 ## What is this?
 
-This is a small project to test a concept/idea for [Shadows of Shaema](http://github.com/shaema). The concept being mainly the blending of 3D and 2D mechanic.
+This is a small project to test a concept/idea for [Shadows of Shaema](https://gitlab.com/aurorafossorg/p/sos). The concept being mainly the blending of 3D and 2D mechanic.
 
 It's a very early concept, and is currently WIP. The push to GitLab was for easier code sharing and access.
 
